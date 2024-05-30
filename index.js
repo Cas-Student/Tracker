@@ -1,5 +1,7 @@
 import express from 'express';
-const app = express(server);
+import http from 'node:http'
+
+const app = express(http.createServer());
 
 app.get('/', (req, res) => {
   const ip = req.get('X-Forwarded-For');
